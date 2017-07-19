@@ -15,7 +15,18 @@ end
 
 get '/side' do
 	sandwich = params[:sandwich]
-	erb :side, :locals => {:sandwich => sandwich}
+	erb :fries, :locals => {:sandwich => sandwich}
+end
+
+post '/fries_choice' do
+	sandwich = params[:sandwich]
+	fries = params[:fries]
+	if fries == "yes"
+		side = "fries"
+		redirect '/shake?sandwich=' + sandwich + '&side=' + side
+	else
+		erb :side, :locals => {:sandwich => sandwich}
+	end
 end
 
 post '/side_choice' do
