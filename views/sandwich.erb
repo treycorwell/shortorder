@@ -1,6 +1,18 @@
+<script src="js/getdate.js"></script>
+
 Hello! What kind of sandwich would you like?
 
 <form method="post" action="sandwich_choice">
 	<input type="text" name="sandwich">
-	<input type="submit">
+	<input type="submit" value="Order" onclick="getOrderDate('todaysdate')">
+	<input type="text" name="orderdate" id="todaysdate">
 </form>
+
+
+
+<!--<p>This is the date when we press the button</p>
+<p id="date"></p>
+<script type="text/javascript">
+	window.onload = getOrderDate("dateonload");
+</script>
+-->
