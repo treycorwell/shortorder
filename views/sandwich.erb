@@ -4,6 +4,23 @@ Hello! What kind of sandwich would you like?
 
 <form method="post" action="sandwich_choice">
 	<input type="text" name="sandwich">
+	<br>
+	<br>
 	<input type="submit" value="Order" onclick="getOrderDate('todaysdate')">
 	<input type="text" name="orderdate" id="todaysdate" hidden>
 </form>
+
+<button type="button" onclick="getOrderDate()">
+Click here to Show the Date and Time
+</button>
+
+<p id="date"></p>
+
+<script>
+	function getOrderDate() {
+		document.getElementById('date').innerHTML = Date();
+	}
+
+
+
+</script>
